@@ -32,7 +32,7 @@ class Application(tk.Frame):
     def create_widgets(self):
 
         # creating buttons
-        self.snip_button = tk.Button(self, text='Snip button\n Select numbers to copy', height=2, width=30)
+        self.snip_button = tk.Button(self, text='Snip button\n Select text to copy', height=2, width=30)
         self.snip_button["command"] = self.snip_screen   #self.snipping
         self.quit = tk.Button(self, text="QUIT", fg="red", command=self.master.destroy)
 
