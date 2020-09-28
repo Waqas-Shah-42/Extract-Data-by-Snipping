@@ -8,5 +8,5 @@
 
 
 <h2 align="center">Program Screenshot<br>
-  <img title="program screenshot" src="Images/program.png" alt="Program Screenshot" border="2">
+  <img title="program screenshot" src="Images/program.png" alt="Program Screenshot" style="border: 3px solid #000">
 </h2>
