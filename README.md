@@ -7,18 +7,18 @@
 
 # Prerequisite
 The following software needs to be installed needs to be installed in order for this program to run.
-> tesseract-ocr
+> <b>tesseract-ocr</b>
 
 Additionally, the following python libraries are needed for the program to run
 
->* tkinter
->* PIL
->* cv2
->* pytesseract
->* numpy
->* pyperclip
->* datetime
->* os
+>* <b>tkinter</b>
+>* <b>PIL</b>
+>* <b>cv2</b>
+>* <b>pytesseract</b>
+>* <b>numpy</b>
+>* <b>pyperclip</b>
+>* <b>datetime</b>
+>* <b>os</b>
 
 <h2 align="center">Program Screenshot<br>
   <img title="program screenshot" src="Images/program.png" alt="Program Screenshot" style="border: 3px solid #000">
