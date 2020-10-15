@@ -6,7 +6,7 @@
 
 
 # Installation
-tesseract-ocr needs  to be installed for the program to run properly <br>
+<b>tesseract-ocr</b> needs  to be installed for the program to run properly <br>
 Additionally, the following python libraries are needed for the program to run
 * tkinter
 * PIL
