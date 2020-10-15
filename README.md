@@ -14,7 +14,6 @@ Additionally, the following python libraries are needed for the program to run
 * pytesseract
 * numpy
 * pyperclip
-* statistics
 * datetime
 * os
 
