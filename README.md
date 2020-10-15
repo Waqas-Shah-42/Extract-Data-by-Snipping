@@ -5,17 +5,20 @@
  * The user can then easily paste that information wherever it  is required.
 
 
-# Installation
-<b>tesseract-ocr</b> needs  to be installed for the program to run properly <br>
+# Prerequisite
+The following software needs to be installed needs to be installed in order for this program to run.
+> tesseract-ocr
+
 Additionally, the following python libraries are needed for the program to run
-* tkinter
-* PIL
-* cv2
-* pytesseract
-* numpy
-* pyperclip
-* datetime
-* os
+
+>* tkinter
+>* PIL
+>* cv2
+>* pytesseract
+>* numpy
+>* pyperclip
+>* datetime
+>* os
 
 <h2 align="center">Program Screenshot<br>
   <img title="program screenshot" src="Images/program.png" alt="Program Screenshot" style="border: 3px solid #000">
