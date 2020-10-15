@@ -7,7 +7,7 @@
 
 # Installation
 tesseract-ocr needs  to be installed for the program to run properly <br>
-Additionally, the folloing python libraries are needed for the program to run
+Additionally, the following python libraries are needed for the program to run
 * tkinter
 * PIL
 * cv2
