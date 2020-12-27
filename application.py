@@ -126,11 +126,64 @@ class ImageProcessing():
         image_width = dimension_images[1]
 
         image_ratio = 50/image_height
-        img_temp = cv2.resize(img, (int(image_width*image_ratio), int(image_height*image_ratio)), interpolation=cv2.INTER_CUBIC)
+        img_temp = cv2.resize(img, (int(image_width*image_ratio), int( image_height*image_ratio)), interpolation=cv2.INTER_CUBIC)
 
         imgstr1 = str(pytesseract.image_to_string(img_temp))
-        pyperclip.copy(imgstr1)
+
+        #cleaning string
+        temp2 = ''
+        for char in imgstr1:
+            if char.isalnum():
+                temp2 = temp2 + char
+        imgstr1 = temp2
+
+        temp = self.luhn(imgstr1)
+        pyperclip.copy(imgstr1+"   " + temp)
         # spam = pyperclip.paste()
+
+    def luhn(self, imei):
+
+        imei = str(imei)
+        temp = ''
+        # ensuring that no unwanted charcters are included in imei
+        for char in imei:
+            if char.isalnum():
+                temp = temp + char
+
+        imei = temp
+
+        if(len(imei)>15):
+            imei = imei[0:15]
+
+        # creating an array of imei digits
+        if(len(imei) == 15):
+            imei_arr = [0 for i in range(15)]
+            for i in range(len(imei)):
+                imei_arr[i] = int(imei[i])
+
+            # iterating over digits where multiplication has to happen
+            for i in range(1, len(imei), 2):
+                temp_int = int(imei_arr[i])*2
+                if temp_int > 9:
+                    temp_str = str(temp_int)
+                    temp_int = int(temp_str[0])+int(temp_str[1])
+
+                imei_arr[i] = temp_int
+
+            # checking is sum of array is mod of 10
+            if(sum(imei_arr) % 10 == 0):
+                # print('passed luhns algorithim')
+                return "passed luhns algorithim"
+
+            else:
+                # print('failed luhns algorithim')
+                return "failed luhns algorithim"
+
+        # checks if length of IMEI is not equal to 10
+        else:
+            # print('imei not 15')
+            return 'imei not 15 length'
+
 
 
 root = tk.Tk()
